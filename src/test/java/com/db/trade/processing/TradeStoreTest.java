@@ -61,7 +61,7 @@ public class TradeStoreTest {
         assertFalse(trades.get(0).isExpired());
     }
 
-    @Test
+    @Test(expected = TradeValidationException.class)
     public void testUpdateExpiredTradeFlag() throws TradeValidationException {
         Date pastDate = new Date(System.currentTimeMillis() - 86400000); // 24 hours ago
         Trade expiredTrade = new Trade("T4", 1, "CP4", "B4", pastDate, new Date(), false);
