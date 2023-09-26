@@ -12,9 +12,9 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>21</maven.compiler.source>
-    <maven.compiler.target>21</maven.compiler.target>
-    <java.version>21</java.version>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+    <java.version>8</java.version>
     <log4j2.version>2.20.0</log4j2.version>
   </properties>
 
@@ -48,4 +48,25 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+<build>
+  <plugins>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.3.0</version>
+    <configuration>
+      <archive>
+        <manifest>
+          <addClasspath>true</addClasspath>
+          <classpathPrefix>lib/</classpathPrefix>
+          <classpathLayoutType>repository</classpathLayoutType>
+        </manifest>
+        <manifest>
+          <mainClass>com.vikalp.trade.AppTest</mainClass>
+        </manifest>
+      </archive>
+    </configuration>
+  </plugin>
+  </plugins>
+</build>
 </project>

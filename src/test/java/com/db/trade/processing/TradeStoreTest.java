@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -70,6 +72,76 @@ public class TradeStoreTest {
         List<Trade> trades = tradeStore.getAllTrades();
         assertFalse(trades.isEmpty());
         assertTrue(trades.get(0).isExpired());
+    }
+
+    @Test
+    public void testAddTrade_NewTrade() throws TradeValidationException, ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date maturityDate = dateFormat.parse("20/05/2024");
+        Date createdDate = new Date();
+
+        Trade trade = new Trade("T1", 1, "CP-1", "B1", maturityDate, createdDate, false);
+
+        tradeStore.addTrade(trade);
+
+        List<Trade> trades = tradeStore.getAllTrades();
+        assertEquals(1, trades.size());
+        assertEquals(trade, trades.get(0));
+    }
+
+    @Test (expected = TradeValidationException.class)
+    public void testAddTrade_SameVersion() throws TradeValidationException, ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date maturityDate = dateFormat.parse("20/05/2024");
+        Date createdDate = new Date();
+
+        Trade trade1 = new Trade("T2", 2, "CP-2", "B1", maturityDate, createdDate, false);
+        Trade trade2 = new Trade("T2", 1, "CP-1", "B1", maturityDate, createdDate, false);
+
+        tradeStore.addTrade(trade1);
+        tradeStore.addTrade(trade2);
+
+        List<Trade> trades = tradeStore.getAllTrades();
+        assertEquals(1, trades.size());
+        assertEquals(trade1, trades.get(0));
+    }
+
+    @Test
+    public void testAddTrade_LowerVersion() throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date maturityDate = dateFormat.parse("20/05/2024");
+        Date createdDate = new SimpleDateFormat("dd/MM/yyyy").parse("14/03/2024");
+
+        Trade trade1 = new Trade("T2", 1, "CP-1", "B1", maturityDate, createdDate, false);
+        Trade trade2 = new Trade("T2", 2, "CP-2", "B1", maturityDate, createdDate, false);
+        try {
+            tradeStore.addTrade(trade2);
+        } catch (TradeValidationException e) {
+            throw new RuntimeException(e);
+        }
+        assertThrows(TradeValidationException.class, () -> {
+                        tradeStore.addTrade(trade1);
+        });
+
+        List<Trade> trades = tradeStore.getAllTrades();
+        assertEquals(1, trades.size());
+        assertEquals(trade2, trades.get(0));
+    }
+
+    @Test
+    public void testAddTrade_ExpiredMaturityDate() throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date maturityDate = dateFormat.parse("20/05/2014");
+        Date createdDate = new Date();
+
+        Trade trade = new Trade("T3", 3, "CP-3", "B2", maturityDate, createdDate, false);
+
+        assertThrows(TradeValidationException.class, () -> {
+            tradeStore.addTrade(trade);
+        });
+
+        List<Trade> trades = tradeStore.getAllTrades();
+        assertEquals(0, trades.size());
     }
 
     public static void main(String[] args)
