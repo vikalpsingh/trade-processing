@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.time.LocalDate;
 
 public class Trade {
 
@@ -18,7 +19,13 @@ public class Trade {
 
       private int version;
 
-    public Trade(String tradeId, int version, String counterPartyId, String bookId, Date maturityDate, Date createdDate, boolean expired) {
+    private String counterPartyId;
+    private String bookId;
+    private LocalDate  maturityDate;
+    private LocalDate  createdDate;
+    private String expired;
+
+    public Trade(String tradeId, int version, String counterPartyId, String bookId, LocalDate  maturityDate, LocalDate  createdDate, String expired) {
         this.tradeId = tradeId;
         this.version = version;
         this.counterPartyId = counterPartyId;
@@ -27,12 +34,6 @@ public class Trade {
         this.createdDate = createdDate;
         this.expired = expired;
     }
-
-    private String counterPartyId;
-    private String bookId;
-    private Date maturityDate;
-    private Date createdDate;
-    private boolean expired;
 
 
     public String getTradeId() {
@@ -43,16 +44,25 @@ public class Trade {
         return version;
     }
 
-    public Date getMaturityDate() {
+    public LocalDate  getMaturityDate() {
         return maturityDate;
     }
 
-    public void setExpired(boolean expired) {
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public void setExpired(String  expired) {
         this.expired = expired;
     }
 
-    public boolean isExpired(){
+    public String isExpired(){
         return this.expired;
+    }
+
+
+    public void setExpiredFlag(String expiredFlag) {
+        this.expired = expiredFlag;
     }
 
     @Override

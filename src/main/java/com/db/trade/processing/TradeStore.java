@@ -8,12 +8,15 @@
 
 package com.db.trade.processing;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.time.LocalDate;
 
 
 import com.db.trade.processing.entity.Trade;
+import com.db.trade.processing.util.TradeExpiryFlag;
 import com.db.trade.processing.util.TradeValidationException;
 
 
@@ -36,18 +39,18 @@ public class TradeStore {
             }
         }
 
-        if (newTrade.getMaturityDate().before(new Date())) {
+        if (newTrade.getMaturityDate().isBefore(LocalDate.now())) {
             throw new TradeValidationException("Trade has an expired maturity date.");
         }
 
-        trades.add(newTrade);
+       // trades.add(newTrade);
     }
 
     public void updateExpiredTrades() {
-        Date currentDate = new Date();
+        LocalDate currentDate = LocalDate.now();
         for (Trade trade : trades) {
-            if (trade.getMaturityDate().before(currentDate)) {
-                trade.setExpired(true);
+            if (trade.getMaturityDate().isBefore(currentDate)) {
+                trade.setExpired(TradeExpiryFlag.YES.getFlag());
             }
         }
     }
