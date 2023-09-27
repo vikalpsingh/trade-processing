@@ -5,7 +5,7 @@
  * @since   2023-09-26
  */
 
-package com.db.trade.processing.service;
+package com.db.trade.processing;
 
 
 import java.time.LocalDate;
@@ -27,21 +27,18 @@ import com.db.trade.processing.entity.Trade;
 import com.db.trade.processing.controller.TradeStoreController;
 
 @SpringBootApplication
-@EnableScheduling
-public class TradeStoreApplication implements CommandLineRunner {
+public class TradeStoreApplication {
 
-    private static final Logger logger = LoggerFactory.getLogger(TradeStoreApplication.class);
 
-    @Autowired
-    private Environment env;
+    public static void main(String[] args) { SpringApplication.run(TradeStoreApplication.class, args); }
+/*
 
-    @Autowired
-    private ApplicationContext appContext;
 
     public static void main(String[] args) {
         SpringApplication springApplication = new SpringApplication(TradeStoreApplication.class);
         springApplication.run(args);
     }
+
 
     @Override
     public void run(String... strings) {
@@ -76,6 +73,6 @@ public class TradeStoreApplication implements CommandLineRunner {
         if (logger.isInfoEnabled()) {
             logger.info(String.format("Total trades : %s", tradeStoreController.findAllTrades().size()));
         }
-    }
+    }*/
 
 }

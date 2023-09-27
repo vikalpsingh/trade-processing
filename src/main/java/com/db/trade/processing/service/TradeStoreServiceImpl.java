@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.db.trade.processing.entity.Trade;
@@ -13,7 +14,7 @@ import com.db.trade.processing.repository.TradeStoreRepository;
 import com.db.trade.processing.util.StoreStatus;
 import com.db.trade.processing.util.TradeExpiryFlag;
 
-@Service
+@Component
 public class TradeStoreServiceImpl implements TradeStoreService {
 
     @Autowired

@@ -7,6 +7,7 @@ import com.db.trade.processing.service.TradeStoreService;
 import com.db.trade.processing.util.InvalidTradeException;
 import com.db.trade.processing.util.StoreStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Component;
 
 

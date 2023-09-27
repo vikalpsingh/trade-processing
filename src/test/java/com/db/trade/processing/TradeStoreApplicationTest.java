@@ -1,4 +1,4 @@
-package com.db.trade.processing.service;
+package com.db.trade.processing;
 
 import static org.junit.jupiter.api.Assertions.assertSame;
 
@@ -19,7 +19,6 @@ import com.db.trade.processing.entity.Trade;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootTest
-@ComponentScan(basePackages = {"com.db.trade.processing"})
 class TradeStoreApplicationTest {
 
     @SpyBean
