@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abd8c7c1-5093-43ac-aac9-5ac544c65b82" name="Changes" comment="Created Jenkinsfile with Maven Install Stage">
+    <list default="true" id="abd8c7c1-5093-43ac-aac9-5ac544c65b82" name="Changes" comment="Formatting and code changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/entity/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/entity/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/util/TradeValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/util/TradeValidationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikalp/trade/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikalp/trade/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695556124392</updated>
       <workItem from="1695556125550" duration="12742000" />
-      <workItem from="1695623418472" duration="10606000" />
+      <workItem from="1695623418472" duration="12077000" />
     </task>
     <task id="LOCAL-00001" summary="Moving the base code with test cases">
       <option name="closed" value="true" />
@@ -220,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695741799850</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Formatting and code changes">
+      <option name="closed" value="true" />
+      <created>1695795431476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695795431476</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +285,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moving the base code with test cases" />
     <MESSAGE value="Created Jenkinsfile with Maven Install Stage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Jenkinsfile with Maven Install Stage" />
+    <MESSAGE value="Formatting and code changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Formatting and code changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
