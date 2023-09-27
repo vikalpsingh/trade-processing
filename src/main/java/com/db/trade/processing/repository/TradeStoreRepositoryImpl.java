@@ -7,10 +7,10 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import com.db.trade.processing.repository.TradeStoreRepository;
 import org.springframework.stereotype.Component;
 
 import com.db.trade.processing.entity.Trade;
+import org.springframework.stereotype.Service;
 
 /**
  * In memory implementation of trade store
@@ -19,8 +19,7 @@ import com.db.trade.processing.entity.Trade;
  *
  */
 @Component
-public class TradeStoreRepositoryInMemory implements TradeStoreRepository {
-
+public class TradeStoreRepositoryImpl implements TradeStoreRepository {
     private static final Map<String, Trade> tradeMap = new ConcurrentHashMap<>();
 
     @Override

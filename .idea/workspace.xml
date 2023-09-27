@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abd8c7c1-5093-43ac-aac9-5ac544c65b82" name="Changes" comment="Formatting and code changes">
+    <list default="true" id="abd8c7c1-5093-43ac-aac9-5ac544c65b82" name="Changes" comment="build changes">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/repository/TradeStoreRepositoryInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/repository/TradeStoreRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikalp/trade/TradeStoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/service/TradeStoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/controller/TradeStoreControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/controller/TradeStoreControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/service/TradeStoreApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/service/TradeStoreApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vikalp/trade/TradeStoreApplicationTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +65,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="native" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -81,7 +94,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
@@ -92,23 +105,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vikal\eclipse-workspace\processing\src\main\java\com\db\trade\processing" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.db.trade.processing.service" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.TradeStoreControllerTest">
-    <configuration name="TradeStoreApplicationTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.vikalp.trade.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.vikalp.trade" />
-      <option name="MAIN_CLASS_NAME" value="com.vikalp.trade.TradeStoreApplicationTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TradeStoreApplicationTest">
     <configuration name="TradeStoreApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
@@ -124,6 +125,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TradeStoreApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.trade.processing.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vikalp.trade" />
+      <option name="MAIN_CLASS_NAME" value="com.vikalp.trade.TradeStoreApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TradeStoreControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
@@ -134,21 +150,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.db.trade.processing.controller" />
       <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.controller.TradeStoreControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TradeStoreRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.db.trade.processing.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.repository.TradeStoreRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,13 +171,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TradeStoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="processing" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.db.trade.processing.service.TradeStoreApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.trade.processing.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TradeStoreApplicationTest" />
+        <item itemvalue="Spring Boot.TradeStoreApplication" />
+        <item itemvalue="JUnit.TradeStoreRepositoryTest.testSave" />
         <item itemvalue="JUnit.TradeStoreControllerTest" />
         <item itemvalue="JUnit.TradeStoreApplicationTest (1)" />
-        <item itemvalue="JUnit.TradeStoreApplicationTest" />
-        <item itemvalue="JUnit.TradeStoreRepositoryTest" />
-        <item itemvalue="JUnit.TradeStoreRepositoryTest.testSave" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +206,8 @@
       <workItem from="1695623418472" duration="17393000" />
       <workItem from="1695803159842" duration="1296000" />
       <workItem from="1695805538459" duration="552000" />
-      <workItem from="1695806105993" duration="162000" />
+      <workItem from="1695806105993" duration="1728000" />
+      <workItem from="1695807847287" duration="2712000" />
     </task>
     <task id="LOCAL-00001" summary="Moving the base code with test cases">
       <option name="closed" value="true" />
@@ -250,7 +265,31 @@
       <option name="project" value="LOCAL" />
       <updated>1695796795207</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="build changes">
+      <option name="closed" value="true" />
+      <created>1695806392108</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1695806392108</updated>
+    </task>
+    <task id="LOCAL-00009" summary="build changes">
+      <option name="closed" value="true" />
+      <created>1695806748249</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1695806748249</updated>
+    </task>
+    <task id="LOCAL-00010" summary="build changes">
+      <option name="closed" value="true" />
+      <created>1695806839821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695806839821</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,31 +352,12 @@
     <MESSAGE value="Moving the base code with test cases" />
     <MESSAGE value="Created Jenkinsfile with Maven Install Stage" />
     <MESSAGE value="Formatting and code changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Formatting and code changes" />
+    <MESSAGE value="build changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="build changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>137</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java</url>
           <line>46</line>

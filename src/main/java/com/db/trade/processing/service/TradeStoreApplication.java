@@ -5,7 +5,7 @@
  * @since   2023-09-26
  */
 
-package com.vikalp.trade;
+package com.db.trade.processing.service;
 
 
 import java.time.LocalDate;
