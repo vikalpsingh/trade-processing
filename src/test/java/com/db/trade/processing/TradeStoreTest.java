@@ -1,3 +1,9 @@
+/**
+ * Trade persistence test class
+ * @author  Vikalp
+ * @version 1.0
+ * @since   2023-09-26
+ */
 package com.db.trade.processing;
 
 import com.db.trade.processing.entity.Trade;
@@ -24,6 +30,9 @@ public class TradeStoreTest {
         tradeStore = new TradeStore();
     }
 
+    /*
+    @desc : Add basic trade in store
+     */
     @Test
     public void testAddValidTrade() throws TradeValidationException {
         LOGGER.info("testAddValidTrade!");
@@ -35,6 +44,9 @@ public class TradeStoreTest {
         assertEquals(validTrade, trades.get(0));
     }
 
+    /*
+    @desc : Validate trade version
+    */
     @Test(expected = TradeValidationException.class)
     public void testAddTradeWithLowerVersion() throws TradeValidationException {
         LOGGER.debug("testAddTradeWithLowerVersion!");
@@ -44,6 +56,9 @@ public class TradeStoreTest {
         tradeStore.addTrade(trade2); // This should throw an exception
     }
 
+    /*
+    @desc : Validate` trade maturity
+    */
     @Test(expected = TradeValidationException.class)
     public void testAddTradeWithExpiredMaturityDate() throws TradeValidationException {
         LOGGER.debug("testAddTradeWithExpiredMaturityDate!");
@@ -52,6 +67,9 @@ public class TradeStoreTest {
         tradeStore.addTrade(expiredTrade); // This should throw an exception
     }
 
+    /*
+    @desc : Service to update expired trade based on trade maturity date older than today
+    */
     @Test
     public void testUpdateExpiredTrades() throws TradeValidationException {
         Date futureDate = new Date(System.currentTimeMillis() + 86400000); // 24 hours from now
@@ -63,17 +81,9 @@ public class TradeStoreTest {
         assertFalse(trades.get(0).isExpired());
     }
 
-    @Test(expected = TradeValidationException.class)
-    public void testUpdateExpiredTradeFlag() throws TradeValidationException {
-        Date pastDate = new Date(System.currentTimeMillis() - 86400000); // 24 hours ago
-        Trade expiredTrade = new Trade("T4", 1, "CP4", "B4", pastDate, new Date(), false);
-        tradeStore.addTrade(expiredTrade);
-        tradeStore.updateExpiredTrades();
-        List<Trade> trades = tradeStore.getAllTrades();
-        assertFalse(trades.isEmpty());
-        assertTrue(trades.get(0).isExpired());
-    }
-
+    /*
+     Added trade as per test data
+     */
     @Test
     public void testAddTrade_NewTrade() throws TradeValidationException, ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -89,14 +99,17 @@ public class TradeStoreTest {
         assertEquals(trade, trades.get(0));
     }
 
+    /*
+    Adding same trade version in store
+    */
     @Test (expected = TradeValidationException.class)
     public void testAddTrade_SameVersion() throws TradeValidationException, ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date maturityDate = dateFormat.parse("20/05/2024");
         Date createdDate = new Date();
 
-        Trade trade1 = new Trade("T2", 2, "CP-2", "B1", maturityDate, createdDate, false);
-        Trade trade2 = new Trade("T2", 1, "CP-1", "B1", maturityDate, createdDate, false);
+        Trade trade1 = new Trade("T2", 1, "CP-2", "B1", maturityDate, createdDate, false);
+        Trade trade2 = new Trade("T2", 2, "CP-1", "B1", maturityDate, createdDate, false);
 
         tradeStore.addTrade(trade1);
         tradeStore.addTrade(trade2);

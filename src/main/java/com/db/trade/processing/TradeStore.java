@@ -1,3 +1,11 @@
+/**
+ * Trade store class which does trade validation before calling persistence service
+ * It also provides trade retrieval service
+ * @author  Vikalp
+ * @version 1.0
+ * @since   2023-09-26
+ */
+
 package com.db.trade.processing;
 
 import java.util.ArrayList;
