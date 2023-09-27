@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.time.LocalDate;
 
 import com.db.trade.processing.service.TradeStoreService;
-import com.vikalp.trade.TradeStoreApplication;
+import com.db.trade.processing.service.TradeStoreApplication;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

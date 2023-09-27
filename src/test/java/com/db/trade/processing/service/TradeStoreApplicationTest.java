@@ -1,6 +1,5 @@
 package com.db.trade.processing.service;
 
-
 import static org.junit.jupiter.api.Assertions.assertSame;
 
 import java.time.LocalDate;
@@ -17,8 +16,10 @@ import com.db.trade.processing.controller.TradeStoreController;
 import com.db.trade.processing.entity.Trade;
 
 import com.db.trade.processing.entity.Trade;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootTest
+@ComponentScan(basePackages = {"com.db.trade.processing"})
 class TradeStoreApplicationTest {
 
     @SpyBean

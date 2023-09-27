@@ -20,7 +20,7 @@ import com.db.trade.processing.entity.Trade;
 @TestMethodOrder(OrderAnnotation.class)
 class TradeStoreRepositoryTest {
 
-    private TradeStoreRepository repository = new TradeStoreRepositoryInMemory();
+    private TradeStoreRepository repository = new TradeStoreRepositoryImpl();
 
     private static final List<Trade> trades = new ArrayList<>(4);
 
