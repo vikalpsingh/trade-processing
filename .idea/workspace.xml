@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abd8c7c1-5093-43ac-aac9-5ac544c65b82" name="Changes" comment="Formatting and code changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/controller/TradeStoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/repository/TradeStoreRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/repository/TradeStoreRepositoryInMemory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/service/TradeStoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/service/TradeStoreServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/util/InvalidTradeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/util/StoreStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/util/TradeExpiryFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/controller/TradeStoreControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/service/TradeStoreApplicationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/entity/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/db/trade/processing/entity/Trade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vikalp/trade/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vikalp/trade/TradeStoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/vikalp/trade/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/vikalp/trade/TradeStoreApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -21,10 +46,16 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "CLOSED"
+    }
+  ],
+  "lastFilter": {
+    "state": "CLOSED"
   }
-}</component>
+}]]></component>
   <component name="GithubProjectSettings">
     <option name="branchProtectionPatterns">
       <list>
@@ -77,78 +108,78 @@
       <recent name="C:\Users\vikal\eclipse-workspace\processing\src\main\java\com\db\trade\processing" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TradeStoreTest.testAddTrade_SameVersion">
-    <configuration name="TradeStoreTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.TradeStoreTest" />
+  <component name="RunManager" selected="JUnit.TradeStoreControllerTest">
+    <configuration name="TradeStoreApplicationTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.*" />
+          <option name="PATTERN" value="com.vikalp.trade.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TradeStoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="processing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.db.trade.processing" />
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.TradeStoreTest" />
+      <option name="PACKAGE_NAME" value="com.vikalp.trade" />
+      <option name="MAIN_CLASS_NAME" value="com.vikalp.trade.TradeStoreApplicationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TradeStoreTest.testAddTrade_ExpiredMaturityDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TradeStoreApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.*" />
+          <option name="PATTERN" value="com.db.trade.processing.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.db.trade.processing" />
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.TradeStoreTest" />
-      <option name="METHOD_NAME" value="testAddTrade_ExpiredMaturityDate" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.db.trade.processing.service" />
+      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.service.TradeStoreApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TradeStoreTest.testAddTrade_LowerVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TradeStoreControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.*" />
+          <option name="PATTERN" value="com.db.trade.processing.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.db.trade.processing" />
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.TradeStoreTest" />
-      <option name="METHOD_NAME" value="testAddTrade_LowerVersion" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.db.trade.processing.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.controller.TradeStoreControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TradeStoreTest.testAddTrade_SameVersion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TradeStoreRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="processing" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.db.trade.processing.*" />
+          <option name="PATTERN" value="com.db.trade.processing.repository.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.db.trade.processing" />
-      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.TradeStoreTest" />
-      <option name="METHOD_NAME" value="testAddTrade_SameVersion" />
+      <option name="PACKAGE_NAME" value="com.db.trade.processing.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.repository.TradeStoreRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TradeStoreRepositoryTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="processing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.db.trade.processing.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.db.trade.processing.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.db.trade.processing.repository.TradeStoreRepositoryTest" />
+      <option name="METHOD_NAME" value="testSave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TradeStoreTest.testAddTrade_SameVersion" />
-        <item itemvalue="Application.TradeStoreTest" />
-        <item itemvalue="JUnit.TradeStoreTest.testAddTrade_LowerVersion" />
-        <item itemvalue="JUnit.TradeStoreTest.testAddTrade_ExpiredMaturityDate" />
-        <item itemvalue="JUnit.TradeStoreTest" />
+        <item itemvalue="JUnit.TradeStoreControllerTest" />
+        <item itemvalue="JUnit.TradeStoreApplicationTest (1)" />
+        <item itemvalue="JUnit.TradeStoreApplicationTest" />
+        <item itemvalue="JUnit.TradeStoreRepositoryTest" />
+        <item itemvalue="JUnit.TradeStoreRepositoryTest.testSave" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695556124392</updated>
       <workItem from="1695556125550" duration="12742000" />
-      <workItem from="1695623418472" duration="12077000" />
+      <workItem from="1695623418472" duration="17393000" />
     </task>
     <task id="LOCAL-00001" summary="Moving the base code with test cases">
       <option name="closed" value="true" />
@@ -223,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695795431476</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Formatting and code changes">
+      <option name="closed" value="true" />
+      <created>1695796795207</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695796795207</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,23 +332,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>135</line>
+          <line>137</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/db/trade/processing/TradeStore.java</url>
-          <line>42</line>
+          <line>45</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>113</line>
+          <line>115</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/TradeStoreTest.java</url>
-          <line>116</line>
+          <line>118</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/db/trade/processing/repository/TradeStoreRepositoryTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
