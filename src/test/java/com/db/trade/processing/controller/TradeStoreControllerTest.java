@@ -39,7 +39,7 @@ class TradeStoreControllerTest {
     @Order(1)
     void testStoreTrade() {
         StoreStatus status = this.controller
-                .storeTrade(new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2022, 5, 20), LocalDate.now(), "N"));
+                .storeTrade(new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N"));
 
         assertSame(StoreStatus.OK, status);
     }
@@ -47,7 +47,7 @@ class TradeStoreControllerTest {
     @Test
     @Order(2)
     void testStoreTradeExpectedInvalidTradeExceptionForVersion() {
-        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2022, 5, 20), LocalDate.now(), "N");
+        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N");
         assertThrows(InvalidTradeException.class, () -> this.controller.storeTrade(trade));
     }
 
@@ -61,15 +61,13 @@ class TradeStoreControllerTest {
     @Test
     @Order(4)
     void testFindAllTrades() {
-        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N");
-        this.controller.storeTrade(trade);
         assertTrue(this.controller.findAllTrades().size() > 0);
     }
 
     @Test
     @Order(5)
     void testOverrideTradeWithSameVersion() {
-        Trade trade = new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2022, 6, 20), LocalDate.now(), "N");
+        Trade trade = new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2024, 6, 20), LocalDate.now(), "N");
 
         assertSame(StoreStatus.OK, this.controller.storeTrade(trade));
 
