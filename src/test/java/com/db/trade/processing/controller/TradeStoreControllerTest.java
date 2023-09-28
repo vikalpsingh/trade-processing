@@ -61,6 +61,8 @@ class TradeStoreControllerTest {
     @Test
     @Order(4)
     void testFindAllTrades() {
+        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N");
+        this.controller.storeTrade(trade);
         assertTrue(this.controller.findAllTrades().size() > 0);
     }
 
