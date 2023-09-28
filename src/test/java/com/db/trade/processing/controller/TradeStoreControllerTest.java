@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.time.LocalDate;
 
 import com.db.trade.processing.service.TradeStoreService;
-import com.db.trade.processing.service.TradeStoreApplication;
+import com.db.trade.processing.TradeStoreApplication;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -39,7 +39,7 @@ class TradeStoreControllerTest {
     @Order(1)
     void testStoreTrade() {
         StoreStatus status = this.controller
-                .storeTrade(new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2022, 5, 20), LocalDate.now(), "N"));
+                .storeTrade(new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N"));
 
         assertSame(StoreStatus.OK, status);
     }
@@ -47,7 +47,7 @@ class TradeStoreControllerTest {
     @Test
     @Order(2)
     void testStoreTradeExpectedInvalidTradeExceptionForVersion() {
-        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2022, 5, 20), LocalDate.now(), "N");
+        Trade trade = new Trade("T6", 1, "CP-1", "B1", LocalDate.of(2024, 5, 20), LocalDate.now(), "N");
         assertThrows(InvalidTradeException.class, () -> this.controller.storeTrade(trade));
     }
 
@@ -67,7 +67,7 @@ class TradeStoreControllerTest {
     @Test
     @Order(5)
     void testOverrideTradeWithSameVersion() {
-        Trade trade = new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2022, 6, 20), LocalDate.now(), "N");
+        Trade trade = new Trade("T6", 2, "CP-1", "B1", LocalDate.of(2024, 6, 20), LocalDate.now(), "N");
 
         assertSame(StoreStatus.OK, this.controller.storeTrade(trade));
 
